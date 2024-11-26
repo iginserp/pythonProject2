@@ -8,9 +8,9 @@ def filter_by_state(data: list, state = "EXECUTED") -> list:
             filtered_data.append(dictionary)
     return filtered_data
 
-def sort_by_date(data: list, reverse=True) -> list:
+def sort_by_date(list_dict: list, direction: bool = True) -> list:
 
-    '''Функция фильтрации списка словарей по значению ключа state'''
+    """Функция сортирует словари по дате"""
 
-    sorted_list = sorted(data, key=lambda x: x['date'], reverse=True)
-    return sorted_list
+    sorted_list_by_date = sorted(list_dict, key=lambda x: x["date"], reverse = direction)
+    return sorted_list_by_date
