@@ -15,3 +15,9 @@ def mask_account_card (account_card: str) -> str:
     else:
         return 'неверный формат данных'
     return mask
+
+def get_date (raw_date: str) -> str:
+
+    '''Функция преобразования формата даты'''
+
+    return f"{raw_date[8:10]}.{raw_date[5:7]}.{raw_date[0:4]}"
