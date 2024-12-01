@@ -4,9 +4,7 @@ from src.processing import filter_by_state, sort_by_date
 
 
 def test_filter_by_state() -> None:
-
     """Функция которая передает список словарей"""
-
     assert filter_by_state([
         {"date": "2018-06-30T02:08:58.425572", "id": 939719570, "state": "EXECUTED"},
         {"date": "2019-07-03T18:35:29.512364", "id": 41428829, "state": "EXECUTED"},
@@ -18,9 +16,7 @@ def test_filter_by_state() -> None:
 
 
 def test_filter_by_state_none() -> None:
-
     """Функция которая передает пустой список"""
-
     assert filter_by_state([]) == []
 
 
@@ -124,7 +120,5 @@ def test_filter_by_state_none() -> None:
     ],
 )
 def test_sort_by_date(list_dict: list, direction: bool, sorted_list_by_date: list) -> None:
-
     """Функция передает словари с датой"""
-
     assert sort_by_date(list_dict, direction) == sorted_list_by_date
