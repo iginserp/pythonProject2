@@ -1,10 +1,11 @@
 from src.masks import get_mask_account, get_mask_card_number
 
-def mask_account_card (account_card: str) -> str:
+
+def mask_account_card(account_card: str) -> str:
 
     '''Функция маскировки номера карты'''
 
-    if 'Visa' in account_card or 'Maestro' in account_card  or 'MasterCard' in account_card:
+    if 'Visa' in account_card or 'Maestro' in account_card or 'MasterCard' in account_card:
         card_number = account_card.split()[-1]
         mask = get_mask_card_number(card_number)
     elif 'Счет' in account_card:
@@ -14,10 +15,11 @@ def mask_account_card (account_card: str) -> str:
         return 'неверный формат данных'
     return " ".join(account_card.split()[:-1]) + " " + mask
 
+
 print(mask_account_card("Счет 73654108430135874305"))
 
 
-def get_date (raw_date: str) -> str:
+def get_date(raw_date: str) -> str:
 
     '''Функция преобразования формата даты'''
 
