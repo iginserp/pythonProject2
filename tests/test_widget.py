@@ -30,5 +30,7 @@ def test_mask_account_card(number_str: str, result: str) -> None:
     ],
 )
 def test_get_date(old_data: str, result: str) -> None:
+
     """Функция передает строку с датой"""
+
     assert get_date(old_data) == result
